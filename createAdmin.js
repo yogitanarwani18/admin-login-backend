@@ -46,8 +46,8 @@ async function createAdmin() {
         console.log("Username: admin01");
         console.log("Use the password configured in createAdmin.js");
     } catch (error) {
-        console.error("Error creating admin:", error.message);
-        process.exitCode = 1;
+    console.error("Error creating admin:", error);
+    process.exitCode = 1;
     } finally {
         await db.end();
     }

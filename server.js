@@ -10,6 +10,13 @@ app.use(express.json());
 
 const authRoutes = require("./routes/authRoutes");
 app.use("/api/auth", authRoutes);
+
+const adminRoutes = require("./routes/adminRoutes");
+app.use("/api/admin", adminRoutes);
+
+const adminManagementRoutes = require("./routes/adminManagementRoutes");
+app.use("/api/admins", adminManagementRoutes);
+
 app.get("/api/health", (req, res) => {
     res.json({
         success: true,
